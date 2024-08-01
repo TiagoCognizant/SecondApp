@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "SecondApp"
 include(":app")
- 
+include(":javaexample")
