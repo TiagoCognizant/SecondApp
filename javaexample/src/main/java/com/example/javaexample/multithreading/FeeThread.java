@@ -2,6 +2,10 @@ package com.example.javaexample.multithreading;
 
 public class FeeThread extends Thread{
 
+    public FeeThread (String ftName){
+        super(ftName);
+    }
+
     @Override
     public void run() {
         super.run();
