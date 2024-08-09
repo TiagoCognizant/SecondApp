@@ -7,6 +7,12 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.secondapp.databinding.ActivityStorageBinding
 
+private const val fileName = "filenamecognizant"
+
+private const val NAME = "name"
+
+private const val PASSWORD = "pwd"
+
 class StorageActivity : AppCompatActivity() {
 
     lateinit var binding : ActivityStorageBinding
@@ -25,7 +31,19 @@ class StorageActivity : AppCompatActivity() {
     }
 
     private fun storeData() {
-        TODO("Not yet implemented")
+        // Create a file
+        val preferences = getSharedPreferences( fileName, MODE_PRIVATE )
+
+        // Open the file
+        val editor = preferences.edit()
+
+        // Write to the file
+        editor.putString( NAME, binding.etName.text.toString() )
+        editor.putString( PASSWORD, binding.etPassword.text.toString() )
+
+        // Save the file
+        editor.apply()
+
     }
 
     override fun onResume() {
@@ -34,7 +52,16 @@ class StorageActivity : AppCompatActivity() {
     }
 
     private fun restoreData() {
-        TODO("Not yet implemented")
+        // If file exists it will open that file, else create it
+        val preferences = getSharedPreferences( fileName, MODE_PRIVATE )
+
+        // Get values
+        val name = preferences.getString( NAME, "" )
+        val password = preferences.getString( PASSWORD,"" )
+
+        // Show on TextView
+        binding.etName.setText(name)
+        binding.etPassword.setText(password)
     }
 
 }
