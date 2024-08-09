@@ -10,6 +10,7 @@ android {
         aidl = true
     }
 
+
     namespace = "com.example.secondapp"
     compileSdk = 34
 
