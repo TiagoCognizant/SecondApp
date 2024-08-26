@@ -1,4 +1,4 @@
-package com.example.secondapp
+package com.example.secondapp.activities
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.example.secondapp.R
 
 //dataadapter putting the data into the row card
 class DataAdaper(var data: Array<String>) : RecyclerView.Adapter<DataAdaper.DataViewHolder>() {

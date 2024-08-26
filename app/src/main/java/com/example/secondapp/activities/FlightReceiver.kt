@@ -1,4 +1,4 @@
-package com.example.secondapp
+package com.example.secondapp.activities
 
 import android.content.BroadcastReceiver
 import android.content.Context

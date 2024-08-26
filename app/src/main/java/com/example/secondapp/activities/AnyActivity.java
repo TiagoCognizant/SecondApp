@@ -1,4 +1,4 @@
-package com.example.secondapp;
+package com.example.secondapp.activities;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
 import com.example.cognizantreveng.IAddListener;
+import com.example.secondapp.R;
 import com.example.secondapp.databinding.ActivityAnyBinding;
 
 public class AnyActivity extends AppCompatActivity {
